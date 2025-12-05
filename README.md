@@ -41,3 +41,5 @@ When moisture returns to normal, the pump turns OFF.
 
 All sensor data can be displayed on a screen or sent to an IoT platform.
 
+<h2>Circuit Diagram</h2>
+You can view the full circuit diagram here: [here] (circuit_diagram.txt).
