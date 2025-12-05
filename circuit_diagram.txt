@@ -1,0 +1,45 @@
+                    +---------------------------+
+                    |       Arduino/ESP32       |
+                    +---------------------------+
+                          |      |       |
+                          |      |       |
+                        (5V)   (GND)    (A0)
+                          |      |       |
+                          |      |       |
+            +-------------+      |       +----------------------+
+            |                    |                              |
+            |                    |                              |
+     +------+-----+       +------+-------+              +-------+------+
+     | Soil        |       | Relay Module |              | Water Pump   |
+     | Moisture    |       +--------------+              +--------------+
+     | Sensor      |        IN   VCC   GND                +      -
+     +-------------+         |    |     |                 |      |
+           | | |             |    |     |                 |      |
+           | | |             |    |     |                 |      |
+           | | +---- VCC ----+    |     |                 |      |
+           | +------ GND ----------+     |                 |      |
+           +-------- A0 -----------------+                 |      |
+                                                         NO     GND
+                                                          |       |
+                                                          |       |
+                                                +---------+       |
+                                                |                 |
+                                                |      External   |
+                                                |       Power     |
+                                                |     Supply      |
+                                                +-----------------+
+
+📌 Soil Moisture Sensor
+- VCC → Arduino 5V
+- GND → Arduino GND
+- A0  → Arduino A0 (analog pin)
+
+📌 Relay Module
+- VCC → Arduino 5V
+- GND → Arduino GND
+- IN  → Arduino D7 (digital pin)
+
+📌 Water Pump (through Relay)
+- Pump + → Relay NO (Normally Open)
+- Pump - → External power supply negative
+- Relay COM → External power supply positive
